@@ -449,6 +449,9 @@ RUN echo "memory_limit = 1G;" >> "/root/.phpenv/versions/$PHP_74_VERSION/etc/con
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 #****************      END PHP     ****************************************************
 
+# Cfn Lint
+RUN pip install cfn-lint
+
 #===================END of runtimes_3 ==============
 FROM runtimes_3 AS al2_v3
 
